@@ -59,15 +59,14 @@ model = dict(
     curr_params=dict(
         n_jitter=10,
         iou_thr=(0.8, 0.4),
-        jit_mag=(0.15, 0.6, 0.35, 1.4)),
-    total_step=800. * 462, # COCO train set, 256 batch size
+        jit_mag=(0.15, 0.6, 0.35, 1.4))
 )
 
 # dataset settings
 data_source_cfg = dict(
     type='COCO_BOXES',
     root='data/coco/train2017',
-    json_file= 'data/coco/annotations_drops/train2017_ss_merged.json',
+    json_file= 'data/coco/annotations/instances_train2017.json',  # put your own selective search .json here
     image_format='RGB',
     max_box_num=100)
 
@@ -126,3 +125,4 @@ lr_config = dict(
 )
 checkpoint_config = dict(interval=50)
 total_epochs = 800
+model['total_step'] = total_epochs * 462.

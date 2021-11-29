@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 import copy
 import os
+import logging
 
 from detectron2.data import detection_utils as utils
 
@@ -15,6 +16,10 @@ from .load_coco import load_coco_json
 @DATASOURCES.register_module
 class COCO_BOXES(object):
     def __init__(self, root, json_file, max_box_num, image_format='RGB', *args, **kwargs):
+
+        if json_file.endwith('instances_train2017.json'):
+            logging.critical('Using ground-truth for pre-training, please use selective search result!')
+
         self.data_dicts = load_coco_json(json_file, root)
         self.image_format = image_format
         self.max_box_num = max_box_num
