@@ -2,7 +2,7 @@
 
 ------
 
-Code of our paper [Contrastive Object-level Pre-training with Spatial Noise Curriculum Learning(https://arxiv.org/abs/2111.13651)
+Code of our paper [Contrastive Object-level Pre-training with Spatial Noise Curriculum Learning](https://arxiv.org/abs/2111.13651)
 
 ## Requirement
 
