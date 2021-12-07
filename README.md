@@ -37,6 +37,8 @@ ln -s path_to_coco data
 zsh tools/det_train_benchmark.sh configs/selfsup/ccop/r50_d2.py 8 path_to_output
 ```
 
+You can also directly download the [pre-trained model](https://drive.google.com/file/d/1M8YjO1zD0xFYSPHitlhv70YlW0N8cup6/view?usp=sharing)
+
 ## Citation
 
 ------
